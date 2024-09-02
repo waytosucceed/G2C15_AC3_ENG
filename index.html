@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class Activity 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="Logo_last.png">
+  <style>
+     body {
+            margin: 0;
+         
+        }
+
+        /* Style for the header */
+        .header {
+            position: fixed; /* Fixes the header at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 5px 5px 10px rgb(0, 0, 0);
+            padding-bottom: 10px;
+            background-color: white; /* Ensure the header background is solid */
+            z-index: 1000; /* Ensures the header stays above other content */
+        }
+    .activity {
+      width: 100%;
+      height: auto;
+      background-color: rgb(156, 225, 247);
+      display: flex;
+      justify-content: center;
+      padding-top: 25px;
+    }
+
+    .activity p {
+      font-size: 18px;
+    }
+
+    #img-area {
+      width: 40%;
+    }
+
+    #content-area {
+      width: 60%;
+    }
+
+    #heading {
+      font-family: Harrington;
+      font-size: 40px;
+      font-weight: bolder;
+    }
+
+    table,
+    th,
+    td {
+      border: 2px solid black;
+      padding: 12px;
+      font-size: 29px;
+    }
+
+    .sound-button {
+      cursor: pointer;
+      font-size: 24px;
+      border: none;
+      background: none;
+      /* color: blue; */
+      /* text-decoration: underline; */
+      margin-left: 5px;
+    }
+
+    .sound-button:hover {
+      text-decoration: none;
+    }
+    .backgroun{
+            background-image: url("border.png");
+            background-size: cover; /* Ensures the background image covers the section */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat;
+
+        }
+    .clickable-w {
+      cursor: pointer;
+      color: rgb(154, 34, 240); /* Optionally style the clickable "W" */
+    }
+    .clickable-wh {
+      cursor: pointer;
+      color: rgb(154, 34, 240); /* Optionally style the clickable "W" */
+    }
+  </style>
+</head>
+
+<body class="backgroun">
+  <audio id="sound-player11" src="./sounds/rain.mp3"></audio>
+  <audio id="sound-player12" src="./sounds/wait.mp3"></audio>
+  <audio id="sound-player13" src="./sounds/paint.mp3"></audio>
+  <audio id="sound-player21" src="./sounds/play.mp3"></audio>
+  <audio id="sound-player22" src="./sounds/day.mp3"></audio>
+  <audio id="sound-player23" src="./sounds/way.mp3"></audio>
+  <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+    <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+    <span> <img src="header.png" width="30%" height="auto" class="img-responsive"></span>
+  </div>
+  <br>
+  <br>
+  <center>
+    <h1 id="heading" style="padding-top: 5%; ;">Diphthongs “ai” and “ay”</h1> <br>
+  </center>
+  <div class="container-fluid text-center" style="font-size: 22px; padding:0 17%;">
+       <p class="text-start">
+        The "ai" team:
+       </p>
+       <ul class="text-start">
+        <li>Sounds like the letter A </li>
+        <li>Hides at the start or middle of words</li>
+        <li>Never comes at the end</li>
+        <li>Examples:<span class="clickable-11 btn btn-primary" style="font-size: 20px; color:white">Rain</span>,<span class="clickable-12 btn btn-primary" style="font-size: 20px; color:white">Wait</span>,<span class="clickable-13 btn btn-primary" style="font-size: 20px; color:white">Paint</span></li>
+       </ul>
+       <p class="text-start">
+        The "ay" team:
+       </p>
+       <ul class="text-start">
+        <li>Also sounds like the letter A </li>
+        <li>Loves to be at the end of words</li>
+        <li>Examples:<span class="clickable-21 btn btn-primary" style="font-size: 20px; color:white">Play</span>,<span class="clickable-22 btn btn-primary" style="font-size: 20px; color:white">Day</span>,<span class="clickable-23 btn btn-primary" style="font-size: 20px; color:white">Way</span></li>
+        <li>Words like “Crayon” and “Always” are special case where the diphthong “ay” comes in the middle</li>
+       </ul>
+       <p class="text-start">
+        Remember, when you're reading:
+        <ul class="text-start">
+          <li>If you see "ai" in the middle, say "A"! </li>
+          <li>If you see "ay" at the end, say "A"!</li>
+         </ul>
+       </p>
+       
+     
+ 
+    
+    <a href="fun_time.html" class="btn btn-primary mb-5 btn-lg- text-center"
+      style="height: 50px; width: 200px; font-size: 22px;">Word Meanings</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      var soundPlayer = document.getElementById('sound-player12');
+      var clickableW = document.querySelector('.clickable-12');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+
+      
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      var soundPlayer = document.getElementById('sound-player13');
+      var clickableW = document.querySelector('.clickable-13');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+
+      
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      var soundPlayer = document.getElementById('sound-player11');
+      var clickableW = document.querySelector('.clickable-11');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+
+      
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      var soundPlayer = document.getElementById('sound-player21');
+      var clickableW = document.querySelector('.clickable-21');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+
+      
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      var soundPlayer = document.getElementById('sound-player22');
+      var clickableW = document.querySelector('.clickable-22');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+
+      
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      var soundPlayer = document.getElementById('sound-player23');
+      var clickableW = document.querySelector('.clickable-23');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+
+      
+    });
+    
+  </script>
+</body>
+</html>
